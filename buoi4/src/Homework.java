@@ -31,7 +31,21 @@ public class Homework {
             arrNew[i + 1] = arr[i];
         }
         System.out.println("Mang sau khi chen: " + Arrays.toString(arrNew));
+        System.out.println();
+        //sua lai gia tri trong mang
+        int arrNew1[]=Arrays.copyOf(arr,arr.length);
+        System.out.println("nhap vi tri muon sua: ");
+        int indexEdit=Integer.parseInt(scanner.nextLine());
+        System.out.println("nhap gia tri muon thay vao: ");
+        int newValue=Integer.parseInt(scanner.nextLine());
+        if(indexEdit>=0&&indexEdit< arr.length){
+            arrNew1[indexEdit]=newValue;
+            System.out.println("mang ban dau: "+Arrays.toString(arr));
+            System.out.println("mang sau khi sua : "+Arrays.toString(arrNew1));
+        } else System.out.println("Invalid");
 
+
+        System.out.println();
         // Doi cho phan tu
         // Sao chep mang moi
         int arrNew2[] = Arrays.copyOf(arr, arr.length);

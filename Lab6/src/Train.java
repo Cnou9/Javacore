@@ -1,15 +1,13 @@
+import Contanst.Contanst;
+
 public class Train extends VehicleList{
-    public Train(double speed, double distance) {
-        super(40, distance);
-    }
+    public static final double speed= 40;
+
 
     @Override
-    public void printInfo() {
-        System.out.println("thoi gian den noi cua Train: "+time()+"h");
+    public double time(double distance) {
+        return distance/ Contanst.SPEEDTRAIN;
     }
 
-    @Override
-    public double time() {
-        return distance/speed;
-    }
+
 }

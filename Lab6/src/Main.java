@@ -11,13 +11,12 @@ public class Main {
                 if(distance<0) System.out.println("Invalid Vui long nhap lai!");
         } while (distance<0);
 
-        double speed = 0;
-        Bus bus=new Bus(speed,distance);
-        Train train=new Train(speed,distance);
-        Plane plane=new Plane(speed,distance);
-        bus.printInfo();
-        train.printInfo();
-        plane.printInfo();
+        Bus bus=new Bus();
+        Train train=new Train();
+        Plane plane=new Plane();
+        System.out.println(bus.time(distance));
+        System.out.println(train.time(distance));
+        System.out.println(plane.time(distance));
 
 
     }

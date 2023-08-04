@@ -19,7 +19,8 @@ public class SInhVienTechmaster {
         double point=getPoint();
         if(point>=8) return "Gioi";
         else if(point>=6.5) return "Kha";
-        else return "trung binh";
+        else if(point>=5) return "trung binh";
+        else return "yeu";
     }
 
     protected void printInfo(){

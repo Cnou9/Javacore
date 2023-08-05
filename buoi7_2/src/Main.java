@@ -21,24 +21,24 @@ public class Main {
 
             System.out.print("Your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Read the new line after reading the integer input.
+            scanner.nextLine();
 
             switch (choice) {
                 case 1 -> manage.viewAllStudents();
                 case 2 -> {
                     System.out.print("Enter ID: ");
                     int id = scanner.nextInt();
-                    scanner.nextLine(); // Read the new line after reading the integer input.
+                    scanner.nextLine();
                     System.out.print("Enter name: ");
                     String name = scanner.nextLine();
                     System.out.print("Enter age: ");
                     int age = scanner.nextInt();
-                    scanner.nextLine(); // Read the new line after reading the integer input.
+                    scanner.nextLine();
                     System.out.print("Enter address: ");
                     String address = scanner.nextLine();
                     System.out.print("Enter point: ");
                     double point = scanner.nextDouble();
-                    scanner.nextLine(); // Read the new line after reading the double input.
+                    scanner.nextLine();
                     System.out.print("Enter classroom: ");
                     String classroom = scanner.nextLine();
                     Students newStudent = new Students(id, name, age, address, point, classroom);
@@ -47,16 +47,16 @@ public class Main {
                 case 3 -> {
                     System.out.print("Enter ID of student to update point: ");
                     int updateId = scanner.nextInt();
-                    scanner.nextLine(); // Read the new line after reading the integer input.
+                    scanner.nextLine();
                     System.out.print("Enter new point: ");
                     double newPoint = scanner.nextDouble();
-                    scanner.nextLine(); // Read the new line after reading the double input.
+                    scanner.nextLine();
                     manage.updatePoint(updateId, newPoint);
                 }
                 case 4 -> {
                     System.out.print("Enter ID of student to remove: ");
                     int removeId = scanner.nextInt();
-                    scanner.nextLine(); // Read the new line after reading the integer input.
+                    scanner.nextLine();
                     manage.removeStudent(removeId);
                 }
                 case 5 -> {
@@ -68,7 +68,7 @@ public class Main {
                 case 7 -> manage.sortByAge();
                 case 8 -> manage.sortByPoint();
                 case 0 -> {
-                    System.out.println("Goodbye!");
+                    System.out.println("Out");
                     System.exit(0);
                 }
                 default -> System.out.println("Invalid choice! Please try again.");

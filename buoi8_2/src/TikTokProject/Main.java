@@ -23,7 +23,7 @@ public class Main {
 
 
         SongService songService=new SongService();
-        ArrayList<Song> songs=new ArrayList<>();
+        ArrayList<Song> songs=songService.createSong(scanner);
 
         System.out.println(idol);
         System.out.println(followers);

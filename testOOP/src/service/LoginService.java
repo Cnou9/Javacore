@@ -14,14 +14,12 @@ public class LoginService {
         this.userService = userService;
     }
 
-    public void login(User registedUser, Scanner scanner){
+    public void login(Scanner scanner){
         String username= InputHelper.readString("Nhập username: ", scanner);
         String password=InputHelper.readString("Nhập password: ",scanner);
 
-
-
+        RegisterService registerService=new RegisterService(userService);
         User user=userService.findUserByUsername(username);
-        userService.save(user);
         if(user==null){
             System.out.println("Kiểm tra lại username!");
         } else if(user.getPassword().equals(password)){
@@ -33,7 +31,7 @@ public class LoginService {
             System.out.println("Sai password. Chọn \n 1-Đăng nhập lại \n 2-Quên mật khẩu");
             int choose=Integer.parseInt(scanner.nextLine());
             switch (choose) {
-                case 1 -> login(registedUser, scanner);
+                case 1 -> login(scanner);
                 case 2 -> forgotPassword(scanner);
                 default -> System.out.println("không hợp lệ");
             }
@@ -74,8 +72,7 @@ public class LoginService {
         changePassword(userService,user,scanner);
 
         // Đăng nhập lại sau khi đổi mật khẩu
-        User registedUser = null;
-        login(registedUser, scanner);
+        login(scanner);
     }
 
     private void forgotPassword(Scanner scanner) {

@@ -51,16 +51,18 @@ public class UserService {
             return false; // Kiểm tra độ dài
         }
 
-        if (!Pattern.compile("[A-Z]").matcher(password).find()) {
-            return false;
+        boolean hasUppercase = false;
+        boolean hasSpecialChar = false;
+
+        for (char c : password.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                hasUppercase = true;
+            } else if (".,-_;".indexOf(c) != -1) {
+                hasSpecialChar = true;
+            }
         }
 
-        // Kiểm tra có ít nhất 1 ký tự đặc biệt trong danh sách (. , - _ ;)
-        if (!Pattern.compile("[.,-_;]").matcher(password).find()) {
-            return false;
-        }
-
-        return true;
+        return hasUppercase && hasSpecialChar;
     }
 
 }

@@ -44,7 +44,7 @@ public class Menu {
     }
 
     public static void displayMenuLogin(Scanner scanner,UserService userService){
-        System.out.println("1-Đăng nhập \n 2-Đăng ký \n 0-Thoát chương trình ");
+        System.out.println(" 1-Đăng nhập \n 2-Đăng ký \n 0-Thoát chương trình ");
         int choose=InputHelper.readInt("Lựa chọn: ",scanner);
         LoginService loginService=new LoginService(userService);
         RegisterService registerService=new RegisterService(userService);

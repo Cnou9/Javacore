@@ -18,9 +18,9 @@ public class LoanService {
         Library<Book> bookLibrary=new BookImpl();
         Library<Reader> readerLibrary=new ReaderImpl();
 
-        Book book1=new Book(1,"Java Programming", "Programming", "John Doe", 10);
-        Book book2=new Book(2,"Python Basics", "Programming", "Jane Smith", 15);
-        Book book3=new Book( 3,"Introduction to Algorithms", "Computer Science", "Thomas Johnson", 8);
+        Book book1=new Book(1,"Java Programming", "Programming", "D", 10);
+        Book book2=new Book(2,"Python Basics", "Programming", "J ", 15);
+        Book book3=new Book( 3,"Introduction to Algorithms", "C", "T", 8);
         bookLibrary.add(book1);
         bookLibrary.add(book2);
         bookLibrary.add(book3);

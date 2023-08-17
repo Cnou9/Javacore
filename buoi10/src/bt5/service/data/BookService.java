@@ -10,9 +10,9 @@ public class BookService {
     public void createBook(Scanner scanner){
         Library<Book> bookLibrary=new BookImpl();
 
-        Book book1=new Book(1,"Java Programming", "Programming", "John Doe", 10);
-        Book book2=new Book(2,"Python Basics", "Programming", "Jane Smith", 15);
-        Book book3=new Book( 3,"Introduction to Algorithms", "Computer Science", "Thomas Johnson", 8);
+        Book book1=new Book(1,"Java Programming", "Programming", "J", 10);
+        Book book2=new Book(2,"Python Basics", "Programming", "J", 15);
+        Book book3=new Book( 3,"Introduction to Algorithms", "Computer Science", "T", 8);
 
         bookLibrary.add(book1);
         bookLibrary.add(book2);
